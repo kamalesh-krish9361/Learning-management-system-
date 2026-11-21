@@ -1,0 +1,878 @@
+{
+  "users": [
+    {
+      "id": "user-student-1",
+      "name": "Alex Morgan",
+      "email": "student@auralms.com",
+      "password": "$2a$10$X87qXG1x8r3dZ.3O1mSFeu8s8E5yV8uB6G5K1/1Fv9p7Gg8M3D4a6",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "headline": "Computer Science Student & Aspiring Full Stack Dev",
+      "bio": "Passionate learner exploring web architecture, cloud deployment, and machine learning systems.",
+      "createdAt": "2026-01-15T09:00:00.000Z",
+      "status": "active",
+      "enrolledCourseIds": ["course-1", "course-3", "course-4"],
+      "wishlistCourseIds": ["course-2", "course-6"],
+      "learningHours": 42.5
+    },
+    {
+      "id": "user-instructor-1",
+      "name": "Dr. Elena Vance",
+      "email": "instructor@auralms.com",
+      "password": "$2a$10$X87qXG1x8r3dZ.3O1mSFeu8s8E5yV8uB6G5K1/1Fv9p7Gg8M3D4a6",
+      "role": "instructor",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+      "headline": "Lead Systems Architect & Former Principal Engineer",
+      "bio": "12+ years building distributed web applications and mentoring 50,000+ developers worldwide.",
+      "createdAt": "2025-08-10T09:00:00.000Z",
+      "status": "approved",
+      "rating": 4.9,
+      "studentsCount": 18450
+    },
+    {
+      "id": "user-instructor-2",
+      "name": "Marcus Sterling",
+      "email": "marcus@auralms.com",
+      "password": "$2a$10$X87qXG1x8r3dZ.3O1mSFeu8s8E5yV8uB6G5K1/1Fv9p7Gg8M3D4a6",
+      "role": "instructor",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      "headline": "AI Researcher & Deep Learning Engineer",
+      "bio": "Specializing in neural transformers, generative diffusion, and practical AI implementations.",
+      "createdAt": "2025-09-01T10:00:00.000Z",
+      "status": "approved",
+      "rating": 4.8,
+      "studentsCount": 12890
+    },
+    {
+      "id": "user-admin-1",
+      "name": "Sarah Jenkins",
+      "email": "admin@auralms.com",
+      "password": "$2a$10$X87qXG1x8r3dZ.3O1mSFeu8s8E5yV8uB6G5K1/1Fv9p7Gg8M3D4a6",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
+      "headline": "Platform Director & Learning Systems Admin",
+      "bio": "Managing platform compliance, curriculum quality, and pedagogical excellence across AuraLMS.",
+      "createdAt": "2025-01-01T08:00:00.000Z",
+      "status": "active"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-web",
+      "name": "Web Development",
+      "slug": "web-development",
+      "icon": "Code2",
+      "color": "from-violet-600 to-indigo-600",
+      "badgeColor": "bg-violet-100 text-violet-800",
+      "courseCount": 14,
+      "description": "Master modern full-stack web architectures, APIs, and responsive frontends."
+    },
+    {
+      "id": "cat-ai",
+      "name": "Artificial Intelligence & ML",
+      "slug": "ai-machine-learning",
+      "icon": "Cpu",
+      "color": "from-purple-600 to-pink-600",
+      "badgeColor": "bg-purple-100 text-purple-800",
+      "courseCount": 11,
+      "description": "Deep learning, neural networks, PyTorch, and generative AI systems."
+    },
+    {
+      "id": "cat-design",
+      "name": "UI/UX Design",
+      "slug": "ui-ux-design",
+      "icon": "Palette",
+      "color": "from-amber-500 to-orange-600",
+      "badgeColor": "bg-amber-100 text-amber-800",
+      "courseCount": 9,
+      "description": "Figma design systems, user journeys, interaction design, and prototyping."
+    },
+    {
+      "id": "cat-data",
+      "name": "Data Science & Analytics",
+      "slug": "data-science",
+      "icon": "BarChart3",
+      "color": "from-emerald-500 to-teal-600",
+      "badgeColor": "bg-emerald-100 text-emerald-800",
+      "courseCount": 8,
+      "description": "Statistical modeling, Python pandas, SQL data pipelines, and dashboards."
+    },
+    {
+      "id": "cat-security",
+      "name": "Cybersecurity Fundamentals",
+      "slug": "cybersecurity",
+      "icon": "ShieldCheck",
+      "color": "from-rose-500 to-red-600",
+      "badgeColor": "bg-rose-100 text-rose-800",
+      "courseCount": 7,
+      "description": "Ethical hacking, zero-trust security architectures, and penetration testing."
+    },
+    {
+      "id": "cat-cloud",
+      "name": "Cloud Computing & DevOps",
+      "slug": "cloud-devops",
+      "icon": "Cloud",
+      "color": "from-cyan-500 to-teal-600",
+      "badgeColor": "bg-cyan-100 text-cyan-800",
+      "courseCount": 10,
+      "description": "AWS infrastructure, Docker containers, Kubernetes clusters, and CI/CD pipelines."
+    },
+    {
+      "id": "cat-mobile",
+      "name": "Mobile App Development",
+      "slug": "mobile-development",
+      "icon": "Smartphone",
+      "color": "from-fuchsia-600 to-purple-600",
+      "badgeColor": "bg-fuchsia-100 text-fuchsia-800",
+      "courseCount": 6,
+      "description": "Cross-platform mobile apps using React Native, Flutter, and native APIs."
+    },
+    {
+      "id": "cat-python",
+      "name": "Python Programming",
+      "slug": "python-programming",
+      "icon": "Terminal",
+      "color": "from-amber-600 to-yellow-500",
+      "badgeColor": "bg-amber-100 text-amber-900",
+      "courseCount": 12,
+      "description": "Core algorithms, object-oriented design, web scraping, and automation."
+    }
+  ],
+  "courses": [
+    {
+      "id": "course-1",
+      "title": "Full Stack Web Development Masterclass",
+      "slug": "full-stack-web-development-masterclass",
+      "subtitle": "Build production-ready web apps with React, Node.js, Express, Tailwind, and Modern Databases.",
+      "description": "Master end-to-end full stack development from design systems to scalable production deployments. In this comprehensive bootcamp, you will build full-fledged web applications, implement token authentication, architect REST and GraphQL endpoints, and deploy to modern cloud platforms with continuous integration.",
+      "category": "Web Development",
+      "categoryId": "cat-web",
+      "level": "Intermediate",
+      "duration": "48 Hours",
+      "totalLessons": 24,
+      "rating": 4.9,
+      "reviewsCount": 1420,
+      "enrolledCount": 5890,
+      "price": 84.99,
+      "originalPrice": 149.99,
+      "isFree": false,
+      "isFeatured": true,
+      "status": "published",
+      "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80",
+      "banner": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1400&q=80",
+      "instructorId": "user-instructor-1",
+      "instructor": {
+        "id": "user-instructor-1",
+        "name": "Dr. Elena Vance",
+        "title": "Lead Systems Architect & Tech Educator",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+        "rating": 4.9,
+        "studentsCount": 18450
+      },
+      "learningOutcomes": [
+        "Architect clean, scalable frontend applications with React 18 and state managers",
+        "Build secure RESTful and GraphQL APIs with Node.js, Express, and JWT authentication",
+        "Master relational and document database modeling with optimization techniques",
+        "Implement real-time features using WebSockets and server-sent events",
+        "Deploy full-stack applications with Docker, Nginx, and cloud providers",
+        "Apply industry best practices for unit testing, integration tests, and CI/CD pipelines"
+      ],
+      "requirements": [
+        "Basic knowledge of HTML, CSS, and modern JavaScript (ES6+)",
+        "A computer running Windows, macOS, or Linux with Node.js installed",
+        "Enthusiasm to build real-world web applications"
+      ],
+      "modules": [
+        {
+          "id": "mod-101",
+          "title": "Module 1: Modern Full Stack Foundations",
+          "duration": "6h 30m",
+          "lessons": [
+            {
+              "id": "les-101-1",
+              "title": "Architecture Overview & Developer Environment Setup",
+              "duration": "18:45",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+              "isPreview": true,
+              "content": "Welcome to the Full Stack Web Development Masterclass! In this foundational lesson, we dissect modern web architecture: separating presentation layers, state machines, and microservices backends. We also establish our development toolchain using Vite, ESLint, Prettier, and Git workflows.",
+              "resources": [
+                { "id": "res-1", "name": "Architecture-CheatSheet.pdf", "size": "2.4 MB", "type": "pdf", "downloadUrl": "#" },
+                { "id": "res-2", "name": "Starter-Boilerplate.zip", "size": "4.8 MB", "type": "zip", "downloadUrl": "#" }
+              ]
+            },
+            {
+              "id": "les-101-2",
+              "title": "Mastering Component-Driven Frontend with React",
+              "duration": "24:10",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+              "isPreview": false,
+              "content": "Component design requires understanding unidirectional data flow, custom hooks, and memoization. We construct reusable atomic UI building blocks that scale seamlessly across enterprise apps.",
+              "resources": [
+                { "id": "res-3", "name": "React-Patterns-Guide.pdf", "size": "1.8 MB", "type": "pdf", "downloadUrl": "#" }
+              ]
+            },
+            {
+              "id": "les-101-3",
+              "title": "Styling at Scale with Tailwind CSS & Design Tokens",
+              "duration": "16:20",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+              "isPreview": false,
+              "content": "Learn how utility-first CSS revolutionizes frontend velocity. We configure themes, customize brand palettes, manage dark/light modes, and create fluid layouts.",
+              "resources": [
+                { "id": "res-4", "name": "Design-Tokens-Config.json", "size": "12 KB", "type": "code", "downloadUrl": "#" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mod-102",
+          "title": "Module 2: RESTful API Engineering with Node & Express",
+          "duration": "8h 15m",
+          "lessons": [
+            {
+              "id": "les-102-1",
+              "title": "Express Engine, Middleware Pipelines & Error Handling",
+              "duration": "22:00",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+              "isPreview": false,
+              "content": "Deep dive into the Node.js event loop and Express routing mechanics. We craft custom middleware for request tracing, CORS handling, payload validation, and centralized exception handlers.",
+              "resources": [
+                { "id": "res-5", "name": "Express-Best-Practices.pdf", "size": "3.1 MB", "type": "pdf", "downloadUrl": "#" }
+              ]
+            },
+            {
+              "id": "les-102-2",
+              "title": "JSON Web Token (JWT) Security & Role-Based Access Control",
+              "duration": "28:30",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+              "isPreview": false,
+              "content": "Security is non-negotiable. Learn token issuance, refresh token rotation, bcrypt hashing salts, and granular RBAC authorization guards for student, instructor, and admin portals.",
+              "resources": [
+                { "id": "res-6", "name": "Auth-Security-Checklist.pdf", "size": "1.2 MB", "type": "pdf", "downloadUrl": "#" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mod-103",
+          "title": "Module 3: Database Design, Queries & Optimization",
+          "duration": "10h 40m",
+          "lessons": [
+            {
+              "id": "les-103-1",
+              "title": "Schema Modeling & Relational Integrity",
+              "duration": "25:40",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4",
+              "isPreview": false,
+              "content": "Model multi-tenant course systems, user progress matrices, indexing strategies for sub-millisecond query execution, and database migration lifecycles.",
+              "resources": []
+            }
+          ]
+        }
+      ],
+      "quiz": {
+        "id": "quiz-1",
+        "title": "Full Stack Web Architecture & Security Certification Exam",
+        "description": "Demonstrate your grasp of React component lifecycles, REST API design, and JWT security principles.",
+        "passingScore": 75,
+        "timeLimitMinutes": 15,
+        "questions": [
+          {
+            "id": "q1-1",
+            "type": "multiple_choice",
+            "question": "Which HTTP method should be utilized according to REST conventions for updating a specific resource property without replacing the entire entity?",
+            "options": ["PUT", "PATCH", "POST", "UPDATE"],
+            "correctAnswer": 1,
+            "explanation": "PATCH is standardized in RFC 5789 for applying partial modifications to a resource, whereas PUT typically replaces the entire document."
+          },
+          {
+            "id": "q1-2",
+            "type": "multiple_choice",
+            "question": "What is the primary security advantage of storing JWT refresh tokens inside HttpOnly, Secure cookies rather than localStorage?",
+            "options": [
+              "Cookies consume less bandwidth over HTTP requests",
+              "HttpOnly cookies cannot be read by malicious JavaScript via XSS attacks",
+              "localStorage expires automatically after 24 hours",
+              "HttpOnly cookies encrypt the entire request payload"
+            ],
+            "correctAnswer": 1,
+            "explanation": "HttpOnly cookies prevent client-side JavaScript from accessing sensitive token strings, defending against token theft via Cross-Site Scripting (XSS)."
+          },
+          {
+            "id": "q1-3",
+            "type": "true_false",
+            "question": "React hooks such as useState and useEffect can be called conditionally inside if-statements or loops.",
+            "options": ["True", "False"],
+            "correctAnswer": 1,
+            "explanation": "False. React requires hooks to always be called in the exact same order at the top level of a component function to preserve state across renders."
+          },
+          {
+            "id": "q1-4",
+            "type": "multiple_choice",
+            "question": "In Node.js, which component of the architecture executes asynchronous file I/O operations without blocking the main event loop?",
+            "options": ["V8 Engine", "Libuv Thread Pool", "HTTP Parser", "Node REPL"],
+            "correctAnswer": 1,
+            "explanation": "Libuv manages the thread pool that executes non-blocking file system I/O, DNS queries, and network connections asynchronously."
+          }
+        ]
+      }
+    },
+    {
+      "id": "course-2",
+      "title": "Python Programming: From Zero to Mastery",
+      "slug": "python-programming-zero-to-mastery",
+      "subtitle": "Master modern Python 3.12 syntax, Object-Oriented Design, Automation, APIs, and Web Scraping.",
+      "description": "Unlock the powerhouse language behind modern software, data science, and automation. Build real-world scrapers, CLI utilities, algorithmic problem-solving skills, and automated microservices with clean, idiomatic Python code.",
+      "category": "Python Programming",
+      "categoryId": "cat-python",
+      "level": "Beginner",
+      "duration": "36 Hours",
+      "totalLessons": 20,
+      "rating": 4.85,
+      "reviewsCount": 980,
+      "enrolledCount": 4200,
+      "price": 69.99,
+      "originalPrice": 129.99,
+      "isFree": false,
+      "isFeatured": true,
+      "status": "published",
+      "thumbnail": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1000&q=80",
+      "banner": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=80",
+      "instructorId": "user-instructor-1",
+      "instructor": {
+        "id": "user-instructor-1",
+        "name": "Dr. Elena Vance",
+        "title": "Lead Systems Architect & Tech Educator",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+        "rating": 4.9,
+        "studentsCount": 18450
+      },
+      "learningOutcomes": [
+        "Write clean, readable, idiomatic Python adhering to PEP 8 standards",
+        "Harness object-oriented programming, inheritance, polymorphism, and decorators",
+        "Automate repetitive OS workflows, web scraping, and file processing tasks",
+        "Work with JSON, CSV, SQLite, and external third-party RESTful APIs",
+        "Write robust unit tests with pytest and handle unexpected edge cases"
+      ],
+      "requirements": [
+        "No prior coding experience required; starting from absolute zero",
+        "A desktop or laptop computer running Windows, Mac, or Linux"
+      ],
+      "modules": [
+        {
+          "id": "mod-201",
+          "title": "Module 1: Syntax, Data Types & Control Structures",
+          "duration": "5h 10m",
+          "lessons": [
+            {
+              "id": "les-201-1",
+              "title": "Python Setup, Virtual Environments & Interactive Notebooks",
+              "duration": "14:15",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+              "isPreview": true,
+              "content": "Configure Python virtual environments, package isolation, and VS Code extensions for maximum productivity.",
+              "resources": [
+                { "id": "res-201", "name": "Python-Quickstart.pdf", "size": "1.5 MB", "type": "pdf", "downloadUrl": "#" }
+              ]
+            },
+            {
+              "id": "les-201-2",
+              "title": "Collections: Lists, Tuples, Dictionaries & Sets",
+              "duration": "20:30",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+              "isPreview": false,
+              "content": "Mastering mutable vs immutable types, list comprehensions, dictionary lookups, and set algebra in Python.",
+              "resources": []
+            }
+          ]
+        }
+      ],
+      "quiz": {
+        "id": "quiz-2",
+        "title": "Python Core Concepts & OOP Assessment",
+        "description": "Test your mastery over Python data structures, list comprehensions, and object-oriented design.",
+        "passingScore": 80,
+        "timeLimitMinutes": 10,
+        "questions": [
+          {
+            "id": "q2-1",
+            "type": "multiple_choice",
+            "question": "What is the output of the list comprehension `[x**2 for x in range(5) if x % 2 != 0]`?",
+            "options": ["[0, 4, 16]", "[1, 9]", "[1, 4, 9]", "[0, 1, 4, 9, 16]"],
+            "correctAnswer": 1,
+            "explanation": "range(5) yields 0, 1, 2, 3, 4. The odd numbers are 1 and 3. Their squares are 1 and 9."
+          },
+          {
+            "id": "q2-2",
+            "type": "true_false",
+            "question": "In Python, tuples are immutable while lists are mutable.",
+            "options": ["True", "False"],
+            "correctAnswer": 0,
+            "explanation": "True. Once a tuple is created, its elements cannot be modified, added, or removed."
+          }
+        ]
+      }
+    },
+    {
+      "id": "course-3",
+      "title": "Artificial Intelligence & Deep Learning",
+      "slug": "artificial-intelligence-deep-learning",
+      "subtitle": "Build neural networks, Computer Vision models, Transformer LLMs, and PyTorch solutions.",
+      "description": "Step into the cutting edge of modern AI. From mathematical foundations of gradient descent to implementing Convolutional Neural Networks, Attention Mechanisms, and fine-tuning Transformer models with PyTorch and Hugging Face.",
+      "category": "Artificial Intelligence & ML",
+      "categoryId": "cat-ai",
+      "level": "Advanced",
+      "duration": "52 Hours",
+      "totalLessons": 28,
+      "rating": 4.95,
+      "reviewsCount": 2150,
+      "enrolledCount": 7430,
+      "price": 99.99,
+      "originalPrice": 179.99,
+      "isFree": false,
+      "isFeatured": true,
+      "status": "published",
+      "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80",
+      "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80",
+      "instructorId": "user-instructor-2",
+      "instructor": {
+        "id": "user-instructor-2",
+        "name": "Marcus Sterling",
+        "title": "AI Researcher & Deep Learning Engineer",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+        "rating": 4.8,
+        "studentsCount": 12890
+      },
+      "learningOutcomes": [
+        "Train deep neural networks using PyTorch with GPU hardware acceleration",
+        "Understand backpropagation, tensor mechanics, and loss surface optimization",
+        "Implement CNN architectures for image recognition and object detection",
+        "Build Self-Attention transformers and understand Large Language Models",
+        "Fine-tune open-source models using parameter-efficient fine-tuning (LoRA)"
+      ],
+      "requirements": [
+        "Proficiency in Python programming",
+        "Foundational understanding of linear algebra and calculus"
+      ],
+      "modules": [
+        {
+          "id": "mod-301",
+          "title": "Module 1: Tensors, Autograd & Deep Learning Intuition",
+          "duration": "7h 45m",
+          "lessons": [
+            {
+              "id": "les-301-1",
+              "title": "Tensor Computation & Automatic Differentiation in PyTorch",
+              "duration": "28:10",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+              "isPreview": true,
+              "content": "Deep dive into computational graphs, gradient tracking with requires_grad, and vectorization.",
+              "resources": [
+                { "id": "res-301", "name": "PyTorch-Tensor-Guide.pdf", "size": "3.8 MB", "type": "pdf", "downloadUrl": "#" }
+              ]
+            }
+          ]
+        }
+      ],
+      "quiz": {
+        "id": "quiz-3",
+        "title": "Neural Networks & Attention Mechanisms Quiz",
+        "description": "Assess your understanding of gradient backpropagation and transformer architecture.",
+        "passingScore": 80,
+        "timeLimitMinutes": 12,
+        "questions": [
+          {
+            "id": "q3-1",
+            "type": "multiple_choice",
+            "question": "What is the key advantage of the Scaled Dot-Product Attention mechanism over traditional Recurrent Neural Networks (RNNs)?",
+            "options": [
+              "It completely eliminates the need for matrix multiplications",
+              "It processes input sequences in parallel rather than sequential time steps",
+              "It requires zero trainable weights",
+              "It only works with binary classification tasks"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Attention allows parallel processing across the full sequence length, avoiding the sequential bottleneck of RNNs and mitigating vanishing gradients."
+          }
+        ]
+      }
+    },
+    {
+      "id": "course-4",
+      "title": "UI/UX Design Masterclass & Design Systems",
+      "slug": "ui-ux-design-masterclass-systems",
+      "subtitle": "Craft high-conversion user interfaces, Figma design tokens, interactive prototypes, and wireframes.",
+      "description": "Learn to design world-class digital products. Discover design thinking, user persona research, Figma auto-layout magic, variable-based design systems, micro-animations, and accessible WCAG standards.",
+      "category": "UI/UX Design",
+      "categoryId": "cat-design",
+      "level": "Beginner",
+      "duration": "30 Hours",
+      "totalLessons": 18,
+      "rating": 4.92,
+      "reviewsCount": 1680,
+      "enrolledCount": 6120,
+      "price": 59.99,
+      "originalPrice": 119.99,
+      "isFree": false,
+      "isFeatured": true,
+      "status": "published",
+      "thumbnail": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1000&q=80",
+      "banner": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1400&q=80",
+      "instructorId": "user-instructor-1",
+      "instructor": {
+        "id": "user-instructor-1",
+        "name": "Dr. Elena Vance",
+        "title": "Lead Systems Architect & Tech Educator",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+        "rating": 4.9,
+        "studentsCount": 18450
+      },
+      "learningOutcomes": [
+        "Master Figma components, variants, variables, and responsive auto-layout",
+        "Conduct user research interviews and map user journeys and wireframes",
+        "Design scalable multi-brand design systems with dark and light themes",
+        "Create micro-interactions and high-fidelity clickable product prototypes",
+        "Prepare design specs for seamless developer handoff"
+      ],
+      "requirements": [
+        "Free Figma account and a willingness to explore visual composition"
+      ],
+      "modules": [
+        {
+          "id": "mod-401",
+          "title": "Module 1: Design Principles & Figma Mastery",
+          "duration": "6h 15m",
+          "lessons": [
+            {
+              "id": "les-401-1",
+              "title": "Visual Hierarchy, Typography Scales & Spacing Systems",
+              "duration": "19:20",
+              "type": "video",
+              "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+              "isPreview": true,
+              "content": "Discover how the 8pt grid system, typographic scale, and contrast ratios guide user eye flow through interfaces.",
+              "resources": [
+                { "id": "res-401", "name": "Figma-UI-Kit.fig", "size": "8.5 MB", "type": "file", "downloadUrl": "#" }
+              ]
+            }
+          ]
+        }
+      ],
+      "quiz": {
+        "id": "quiz-4",
+        "title": "Design Systems & Accessibility Quiz",
+        "description": "Test your knowledge on color contrast, WCAG guidelines, and Figma auto-layout.",
+        "passingScore": 80,
+        "timeLimitMinutes": 10,
+        "questions": [
+          {
+            "id": "q4-1",
+            "type": "multiple_choice",
+            "question": "According to WCAG 2.1 AA criteria, what is the minimum contrast ratio required for normal body text against its background?",
+            "options": ["3:1", "4.5:1", "7:1", "2:1"],
+            "correctAnswer": 1,
+            "explanation": "WCAG Level AA requires a contrast ratio of at least 4.5:1 for normal body text and 3:1 for large text (18pt or 14pt bold)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "course-5",
+      "title": "Data Science & Big Data Analytics",
+      "slug": "data-science-big-data-analytics",
+      "subtitle": "Clean, analyze, visualize and model datasets with Pandas, NumPy, SQL, and Scikit-Learn.",
+      "description": "Transform raw numbers into strategic business insights. Learn the complete data science pipeline from data wrangling with Pandas and SQL queries to statistical testing, interactive dashboards, and predictive regression models.",
+      "category": "Data Science & Analytics",
+      "categoryId": "cat-data",
+      "level": "Intermediate",
+      "duration": "44 Hours",
+      "totalLessons": 22,
+      "rating": 4.88,
+      "reviewsCount": 840,
+      "enrolledCount": 3890,
+      "price": 79.99,
+      "originalPrice": 139.99,
+      "isFree": false,
+      "isFeatured": false,
+      "status": "published",
+      "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+      "banner": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
+      "instructorId": "user-instructor-2",
+      "instructor": {
+        "id": "user-instructor-2",
+        "name": "Marcus Sterling",
+        "title": "AI Researcher & Deep Learning Engineer",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+        "rating": 4.8,
+        "studentsCount": 12890
+      },
+      "learningOutcomes": [
+        "Manipulate complex multidimensional datasets with Pandas and NumPy",
+        "Write advanced SQL queries with window functions and aggregations",
+        "Build compelling statistical visualizations with Matplotlib and Seaborn",
+        "Train predictive machine learning models with Scikit-Learn"
+      ],
+      "requirements": ["Basic Python fundamentals"],
+      "modules": [],
+      "quiz": null
+    },
+    {
+      "id": "course-6",
+      "title": "Cybersecurity Fundamentals & Ethical Hacking",
+      "slug": "cybersecurity-fundamentals-ethical-hacking",
+      "subtitle": "Protect networks, perform vulnerability scanning, exploit analysis, and defense in depth.",
+      "description": "Develop hands-on defensive and offensive security skills. Understand network protocols, Wireshark packet analysis, cryptography ciphers, OWASP Top 10 web vulnerabilities, and hardening Linux servers.",
+      "category": "Cybersecurity Fundamentals",
+      "categoryId": "cat-security",
+      "level": "Intermediate",
+      "duration": "40 Hours",
+      "totalLessons": 21,
+      "rating": 4.91,
+      "reviewsCount": 1230,
+      "enrolledCount": 4910,
+      "price": 89.99,
+      "originalPrice": 159.99,
+      "isFree": false,
+      "isFeatured": true,
+      "status": "published",
+      "thumbnail": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80",
+      "banner": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80",
+      "instructorId": "user-instructor-1",
+      "instructor": {
+        "id": "user-instructor-1",
+        "name": "Dr. Elena Vance",
+        "title": "Lead Systems Architect & Tech Educator",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+        "rating": 4.9,
+        "studentsCount": 18450
+      },
+      "learningOutcomes": [
+        "Audit vulnerabilities in web applications following the OWASP Top 10",
+        "Inspect and analyze malicious network packets with Wireshark",
+        "Understand symmetric, asymmetric, and hashing cryptographic schemes",
+        "Harden Linux operating systems and configure firewall rules"
+      ],
+      "requirements": ["Fundamental understanding of computer networks and TCP/IP"],
+      "modules": [],
+      "quiz": null
+    },
+    {
+      "id": "course-7",
+      "title": "Cloud Computing with AWS & DevOps",
+      "slug": "cloud-computing-aws-devops",
+      "subtitle": "Master AWS services, Docker containers, Kubernetes orchestration, and Terraform IaC.",
+      "description": "Architect fault-tolerant cloud infrastructures. Learn Amazon Web Services (EC2, S3, RDS, Lambda), containerization with Docker, multi-container orchestration with Kubernetes, and Infrastructure as Code with Terraform.",
+      "category": "Cloud Computing & DevOps",
+      "categoryId": "cat-cloud",
+      "level": "Advanced",
+      "duration": "46 Hours",
+      "totalLessons": 25,
+      "rating": 4.89,
+      "reviewsCount": 1410,
+      "enrolledCount": 5120,
+      "price": 0,
+      "originalPrice": 99.99,
+      "isFree": true,
+      "isFeatured": false,
+      "status": "published",
+      "thumbnail": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80",
+      "banner": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1400&q=80",
+      "instructorId": "user-instructor-2",
+      "instructor": {
+        "id": "user-instructor-2",
+        "name": "Marcus Sterling",
+        "title": "AI Researcher & Deep Learning Engineer",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+        "rating": 4.8,
+        "studentsCount": 12890
+      },
+      "learningOutcomes": [
+        "Provision scalable cloud architecture across AWS multi-regions",
+        "Containerize full-stack apps with multi-stage Docker builds",
+        "Deploy and manage Kubernetes pods, ingress controllers, and services",
+        "Write declarative infrastructure scripts with Terraform"
+      ],
+      "requirements": ["Basic familiarity with Linux command line and networking"],
+      "modules": [],
+      "quiz": null
+    },
+    {
+      "id": "course-8",
+      "title": "Mobile App Development with React Native",
+      "slug": "mobile-app-development-react-native",
+      "subtitle": "Build cross-platform iOS & Android mobile apps with React Native, Expo, and Native APIs.",
+      "description": "Ship apps to the Apple App Store and Google Play Store with a single codebase. Master React Native components, gesture handlers, camera and geolocation native modules, offline storage, and push notifications.",
+      "category": "Mobile App Development",
+      "categoryId": "cat-mobile",
+      "level": "Intermediate",
+      "duration": "38 Hours",
+      "totalLessons": 19,
+      "rating": 4.87,
+      "reviewsCount": 920,
+      "enrolledCount": 3670,
+      "price": 74.99,
+      "originalPrice": 134.99,
+      "isFree": false,
+      "isFeatured": false,
+      "status": "published",
+      "thumbnail": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80",
+      "banner": "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1400&q=80",
+      "instructorId": "user-instructor-1",
+      "instructor": {
+        "id": "user-instructor-1",
+        "name": "Dr. Elena Vance",
+        "title": "Lead Systems Architect & Tech Educator",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+        "rating": 4.9,
+        "studentsCount": 18450
+      },
+      "learningOutcomes": [
+        "Create responsive mobile user interfaces with React Native and Expo",
+        "Access native camera, location, filesystem, and biometric sensors",
+        "Manage offline cache and local SQLite data synchronization",
+        "Deploy and publish release builds to App Store and Google Play"
+      ],
+      "requirements": ["JavaScript and React fundamentals"],
+      "modules": [],
+      "quiz": null
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "enr-1",
+      "userId": "user-student-1",
+      "courseId": "course-1",
+      "enrolledAt": "2026-02-01T10:00:00.000Z",
+      "progress": 66,
+      "completedLessonIds": ["les-101-1", "les-101-2"],
+      "lastAccessedLessonId": "les-101-3",
+      "status": "in_progress",
+      "certificateIssued": false
+    },
+    {
+      "id": "enr-2",
+      "userId": "user-student-1",
+      "courseId": "course-3",
+      "enrolledAt": "2026-02-10T14:30:00.000Z",
+      "progress": 100,
+      "completedLessonIds": ["les-301-1"],
+      "lastAccessedLessonId": "les-301-1",
+      "status": "completed",
+      "certificateIssued": true,
+      "certificateId": "CERT-AURA-2026-789",
+      "completedAt": "2026-03-01T16:00:00.000Z"
+    },
+    {
+      "id": "enr-3",
+      "userId": "user-student-1",
+      "courseId": "course-4",
+      "enrolledAt": "2026-02-15T11:20:00.000Z",
+      "progress": 33,
+      "completedLessonIds": [],
+      "lastAccessedLessonId": "les-401-1",
+      "status": "in_progress",
+      "certificateIssued": false
+    }
+  ],
+  "quizSubmissions": [
+    {
+      "id": "sub-1",
+      "userId": "user-student-1",
+      "courseId": "course-1",
+      "quizId": "quiz-1",
+      "score": 100,
+      "passed": true,
+      "answers": { "q1-1": 1, "q1-2": 1, "q1-3": 1, "q1-4": 1 },
+      "submittedAt": "2026-02-28T18:30:00.000Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "courseId": "course-1",
+      "userId": "user-student-1",
+      "userName": "Alex Morgan",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "rating": 5,
+      "date": "2026-02-20",
+      "comment": "By far the most well-structured full-stack course I have ever taken. The explanations of JWT security and database indexing alone saved our startup days of debugging!"
+    },
+    {
+      "id": "rev-2",
+      "courseId": "course-1",
+      "userId": "user-reviewer-2",
+      "userName": "Devon Taylor",
+      "userAvatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80",
+      "rating": 5,
+      "date": "2026-02-14",
+      "comment": "Dr. Vance is a phenomenal instructor. The code examples are crisp, modern, and production-tested. 10/10 recommendation for anyone serious about web software."
+    },
+    {
+      "id": "rev-3",
+      "courseId": "course-3",
+      "userId": "user-reviewer-3",
+      "userName": "Samantha Reed",
+      "userAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
+      "rating": 5,
+      "date": "2026-02-24",
+      "comment": "Marcus Sterling makes the transformer self-attention math so intuitive. The hands-on PyTorch coding lessons are unmatched."
+    }
+  ],
+  "discussions": [
+    {
+      "id": "disc-1",
+      "courseId": "course-1",
+      "lessonId": "les-101-1",
+      "userId": "user-student-1",
+      "userName": "Alex Morgan",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "title": "Question regarding Monorepo vs Polyrepo setups in production",
+      "message": "When scaling to multiple microservices and a shared component library, do you recommend Turborepo or npm workspaces?",
+      "createdAt": "2026-02-05T12:00:00.000Z",
+      "replies": [
+        {
+          "id": "rep-1",
+          "userId": "user-instructor-1",
+          "userName": "Dr. Elena Vance",
+          "userAvatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+          "isInstructor": true,
+          "message": "Great question Alex! Turborepo pairs wonderfully with npm or pnpm workspaces because it adds remote caching and task dependency pipelines. We cover this extensively in Module 4!",
+          "createdAt": "2026-02-05T14:30:00.000Z"
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "id": "assign-1",
+      "courseId": "course-1",
+      "title": "Build a JWT-Authenticated REST API with Express",
+      "description": "Implement user signup, login, password hashing with bcrypt, JWT token issuing, and a protected /api/profile endpoint.",
+      "dueDate": "2026-12-01",
+      "totalPoints": 100,
+      "submissionsCount": 42,
+      "submissions": [
+        {
+          "id": "asub-1",
+          "userId": "user-student-1",
+          "userName": "Alex Morgan",
+          "submittedAt": "2026-02-25T11:00:00.000Z",
+          "repoUrl": "https://github.com/alexmorgan/express-auth-project",
+          "notes": "Completed with unit tests and swagger documentation.",
+          "status": "graded",
+          "grade": 98,
+          "feedback": "Outstanding work! Clean code formatting and proper token expiration."
+        }
+      ]
+    }
+  ]
+}
